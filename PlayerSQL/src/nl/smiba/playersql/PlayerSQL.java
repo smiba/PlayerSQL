@@ -31,9 +31,6 @@ public class PlayerSQL extends JavaPlugin implements Listener {
 	} catch (SQLException e) {
 		e.printStackTrace();
 	}
-	/**	if (debug == true){
-		System.out.print("[PlayerSQL] Player *NAAM HIER NOG* successfully removed from the database!");
-	} */
 	}
 	@EventHandler(priority = EventPriority.LOW)
 	public void onPlayerQuit(PlayerQuitEvent event){
@@ -100,12 +97,12 @@ public class PlayerSQL extends JavaPlugin implements Listener {
    /**     getConfig().options().copyDefaults(true);
         saveConfig(); */
     }
-    public void mysqlquery(String query) throws SQLException { //Change "SampleFunction" to your own function name (Can be anything, unless it already exists)
+    public void mysqlquery(String query) throws SQLException { 
 		if (debug == true){
 		System.out.print("PlayerSQL: Connecting with (connection,username,password) " + mysqlhost + ", " + mysqluser + ", " + mysqlpassword);
 		}
     	Connection conn = DriverManager.getConnection(mysqlhost, mysqluser, mysqlpassword); //Creates the connection
-		PreparedStatement sampleQueryStatement = conn.prepareStatement(query); //Put your query in the quotes
+		PreparedStatement sampleQueryStatement = conn.prepareStatement(query); 
 		sampleQueryStatement.executeUpdate(); //Executes the query
 		sampleQueryStatement.close(); //Closes the query
 		conn.close(); //Closes the connection
