@@ -1,0 +1,4 @@
+name: PlayerSQL
+authors: [mariomarco, licentious, simba]
+main: nl.smiba.playersql.main.PlayerSQL
+version: 0.2.00

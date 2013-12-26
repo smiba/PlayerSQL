@@ -1,0 +1,6 @@
+debug: false
+  
+connection: 
+  connection: jdbc:mysql://localhost:3306/database
+  username: user
+  password: password
